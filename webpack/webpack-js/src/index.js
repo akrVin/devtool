@@ -1,5 +1,5 @@
 import './index.html';
-import './stule.css';
+import './style.scss';
 
 const mult = (a, b) => a * b;
 

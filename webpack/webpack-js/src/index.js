@@ -1,5 +1,5 @@
 import './index.html';
-import './style.scss';
+import './style/style.less';
 
 const mult = (a, b) => a * b;
 

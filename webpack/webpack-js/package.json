@@ -30,7 +30,8 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "webpack-ftp-upload-plugin": "^1.0.3"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1"

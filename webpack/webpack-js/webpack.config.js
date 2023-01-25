@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const WebpackFtpUpload = require('webpack-ftp-upload-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -30,6 +31,14 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
+    new WebpackFtpUpload({
+      host: '127.0.0.1',
+      port: '22',
+      username: 'root',
+      password: '123456',
+      local: path.join(__dirname, 'dist'),
+      path: '',
+  })
   ],
   module: {
     rules: [

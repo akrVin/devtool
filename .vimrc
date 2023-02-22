@@ -5,7 +5,26 @@ syntax on " Включает подсветку синтакиса
 " Здесь будут плагины
 "==========================================
 
+call plug#begin('~/.vim/plugged')
 
+Plug 'junegunn/fzf'
+" ==
+" NERDTree
+" ==
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdcommenter'
+
+"Plug 'wfxr/minimap.vim'
+
+
+" ==
+" colorscheme
+" ==
+Plug 'morhetz/gruvbox'
+
+" live-server
 Plug 'manzeloth/live-server'
 
 

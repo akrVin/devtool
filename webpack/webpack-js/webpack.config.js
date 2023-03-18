@@ -8,6 +8,7 @@ const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
 
+
 module.exports = {
   mode,
   target,
@@ -21,7 +22,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    filename: '[name].[contenthash].js',
+    filename: 'js/[name].[contenthash].js',
     assetModuleFilename: 'assets/[hash].[ext]'
   },
   plugins: [
@@ -29,16 +30,17 @@ module.exports = {
       template: path.resolve(__dirname, 'src', 'index.html'),
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      // filename: devMode ? "[name].css" : path.resolve(__dirname, 'dist', 'css', '[name].[contenthash].css'),
+      // filename: '[name].[contenthash].css',
     }),
-    new WebpackFtpUpload({
-      host: '127.0.0.1',
-      port: '22',
-      username: 'root',
-      password: '123456',
-      local: path.join(__dirname, 'dist'),
-      path: '',
-  })
+    // new WebpackFtpUpload({
+    //   host: '',
+    //   port: '',
+    //   username: '',
+    //   password: '',
+    //   local: path.join(__dirname, 'dist'),
+    //   path: '',
+    // })
   ],
   module: {
     rules: [
@@ -47,10 +49,24 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        test: /\.(c|le|sa|sc)ss$/i,
+        test: /\.css$/i,
         use: [
-          //devMode ? 'style-loader' : 
           MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [require('postcss-preset-env')],
+              }
+            }
+          },
+        ],
+      },
+      {
+        test: /\.(c|sc|ss)ss$/i,
+        use: [
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -60,8 +76,7 @@ module.exports = {
               }
             }
           },
-          "less-loader",
-          // "sass-loader",
+          "sass-loader",
         ],
       },
       {

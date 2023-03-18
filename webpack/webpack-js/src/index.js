@@ -1,5 +1,5 @@
 import './index.html';
-import './style/style.less';
+import './style/style.css';
 import logo from './images/Logo.png';
 import { mult, sum } from './modules/calc';
 

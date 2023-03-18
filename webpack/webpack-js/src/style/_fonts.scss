@@ -1,0 +1,37 @@
+@import 'default/mixins';
+
+@font-face {
+  @include  font-face('Inter', '../../fonts/interThin', $weight: 100, $style: normal)
+}
+
+@font-face {
+  @include  font-face('Inter', '../../fonts/interExtraLight', $weight: 200, $style: normal)
+}
+
+@font-face {
+  @include  font-face('Inter', '../../fonts/interLight', $weight: 300, $style: normal)
+}
+
+@font-face {
+  @include  font-face('Inter', '../../fonts/interRegular', $weight: 400, $style: normal)
+}
+
+@font-face {
+  @include  font-face('Inter', '../../fonts/interMedium', $weight: 500, $style: normal)
+}
+
+@font-face {
+  @include  font-face('Inter', '../../fonts/interSemiBold', $weight: 600, $style: normal)
+}
+
+@font-face {
+  @include  font-face('Inter', '../../fonts/interBold', $weight: 700, $style: normal)
+}
+
+// @font-face {
+//   @include  font-face('Inter', '../../fonts/interMedium', $weight: 800, $style: normal)
+// }
+
+@font-face {
+  @include  font-face('Inter', '../../fonts/interBlack', $weight: 900, $style: normal)
+}

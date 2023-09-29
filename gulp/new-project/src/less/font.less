@@ -1,0 +1,20 @@
+// @font-face {
+// 	font-family: BriosoPro_Italic;
+// 	src: url("../fonts/BriosoPro_Italic.woff2") format("woff2"), url("../fonts/BriosoPro_Italic.woff") format("woff");
+// 	font-weight: 400;
+// 	font-style: normal;
+//   font-dispalay: swap;
+// }
+
+@fontName: BriosoPro_Italic;
+@fontWeight: 400;
+
+.fonts() {
+  @font-face {
+    font-family: @fontName;
+    src: url("../fonts/@fontName.woff2") format("woff2"), url("../fonts/@fontName.woff") format("woff");
+    font-weight: @fontWeight;
+    font-style: normal;
+    font-dispalay: swap;
+  }
+}

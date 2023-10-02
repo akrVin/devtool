@@ -1,8 +1,10 @@
 @import "options/connected";
 
+/* @import "settings/fonts"; */
+
 body {
   display: grid;
-  font-family: "BriosoPro_Italic", sans-serif;
+  font-family: "YSText", sans-serif;
   font-weight: 400;
   color: #000;
   background-color: #008000;
@@ -10,14 +12,14 @@ body {
   user-select: none;
 }
 
-div {
-  display: block;
-  width: 600px;
-  height: 400px;
-  background-image: url("@img/BottomBG.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
+// div {
+//   display: block;
+//   width: 600px;
+//   height: 400px;
+//   background-image: url("@img/BottomBG.jpg");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+// }
 
 p {
   font-size: 30px;

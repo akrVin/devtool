@@ -19,10 +19,14 @@
     "post-scss"
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
   },
   /*=============== / Stylelint ===============*/
   /*================ Prettir ================*/
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   /*=============== / Prettir ===============*/
+  /*================= Eslint =================*/
+  "eslint.validate": ["javascript"]
+  /*================ / Eslint ================*/
 }
